@@ -14,14 +14,14 @@ var kelp = [];
 kelp[0] = {
     name: "downKelp",
     x: 300,
-    y: 200,
+    y: 200
     //img: new Image()
 }
 
 kelp[1] = {
     name: "upKelp",
     x: 300,
-    y: 0,
+    y: 0
     //img: new Image()
 }
 
