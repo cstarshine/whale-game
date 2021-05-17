@@ -6,7 +6,15 @@ var whale = {
     y: 20,
     status: 1,
     imgSrc: "asset/img/whale1.png",
-    img: new Image()
+    img: new Image(),
+    isCollision: function(obj){
+        console.log(obj.x+" "+obj.y);
+        if(this.x < obj.x+50 && this.x+50 > obj.x && this.y < obj.y+100 && this.y+50 > obj.y){
+            console.log("충돌처리");
+            return true;
+        }
+        return false;
+    }
 };
 
 var kelp = [];
@@ -93,7 +101,7 @@ function startGame(){
     gameInit();
     var game = setInterval(function(){
         Render();
-        if(whale.y >= 260 || whale.y <= 0){
+        if(whale.y >= 260 || whale.y <= 0 || whale.isCollision(kelp[0]) || whale.isCollision(kelp[1])){
             alert("게임오버");
             clearInterval(game);
             clearCanvas();
