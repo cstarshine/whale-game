@@ -9,7 +9,7 @@ var whale = {
     img: new Image(),
     isCollision: function(obj){
         console.log(obj.x+" "+obj.y);
-        if(this.x < obj.x+50 && this.x+50 > obj.x && this.y < obj.y+100 && this.y+50 > obj.y){
+        if(this.x < obj.x+50 && this.x+40 > obj.x && this.y < obj.y+100 && this.y+40 > obj.y){
             console.log("충돌처리");
             return true;
         }
