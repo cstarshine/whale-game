@@ -73,7 +73,7 @@ function clearCanvas(){
 
 function moveWhale(direction){
     switch(direction){
-        case 'up': whale.y-=45; break;
+        case 'up': whale.y-=35; break;
         case 'down': whale.y+=7; break;
         case 'right': whale.x+=10; break;
         case 'left': whale.x-=10; break;
