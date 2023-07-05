@@ -8,9 +8,7 @@ var whale = {
     imgSrc: "asset/img/whale1.png",
     img: new Image(),
     isCollision: function(obj){
-        console.log(obj.x+" "+obj.y);
         if(this.x < obj.x+50 && this.x+40 > obj.x && this.y < obj.y+100 && this.y+40 > obj.y){
-            console.log("충돌처리");
             return true;
         }
         return false;
@@ -75,8 +73,8 @@ function moveWhale(direction){
     switch(direction){
         case 'up': whale.y-=35; break;
         case 'down': whale.y+=7; break;
-        case 'right': whale.x+=10; break;
-        case 'left': whale.x-=10; break;
+        // case 'right': whale.x+=10; break;
+        // case 'left': whale.x-=10; break;
     }
     drawWhale();
 }
